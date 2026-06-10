@@ -14,8 +14,8 @@ class Changelog extends AbstractChangelog {
 	static string $css_url = "assets/css/changelog.min.css";
 	static string $js_file = "assets/js/changelog"; // Don't use .js or .min.js
 	static string $rtl_page = 'https://www.rtl-theme.com';
-	static string $last_updated_version_option_name = 'bijan_last_updated_version';
-	static string $last_showed_changelog_option_name = 'bijan_last_showed_changelog';
+	static string $last_updated_version_option_name = 'project_last_updated_version';
+	static string $last_showed_changelog_option_name = 'project_last_showed_changelog';
 
 	public static function i18n() : array {
 		return [
