@@ -71,11 +71,11 @@ class Changelog extends AbstractChangelog {
 	static string $menu_parent = 'options-general.php';
 	static string $menu_slug = 'changelogs';
 	static string $logo_url = plugin_dir_url( __FILE__ ) . 'assets/img/logo.svg';
-	static string $css_url = plugin_dir_url( __FILE__ ) . 'assets/css/changelog.min.css';
-	static string $js_file = plugin_dir_url( __FILE__ ) . 'assets/js/changelog';
+	static string $css_url = plugin_dir_url( __FILE__ ) . 'libs/vendor/mjkhajeh/changelog/assets/css/changelog.min.css';
+	static string $js_file = plugin_dir_url( __FILE__ ) . 'libs/vendor/mjkhajeh/changelog/assets/js/changelog';
 	static string $rtl_page = 'https://www.rtl-theme.com';
-	static string $last_updated_version_option_name = 'bijan_last_updated_version';
-	static string $last_showed_changelog_option_name = 'bijan_last_showed_changelog';
+	static string $last_updated_version_option_name = 'project_last_updated_version';
+	static string $last_showed_changelog_option_name = 'project_last_showed_changelog';
 
 	public static function i18n() : array {
 		return [
@@ -170,7 +170,7 @@ You should update `$last_updated_version_option_name` from your own plugin or th
 Example:
 
 ```php
-update_option( 'bijan_last_updated_version', '1.2.0.0', false );
+update_option( 'project_last_updated_version', '1.2.0.0', false );
 ```
 
 ## Registered WordPress Hooks
