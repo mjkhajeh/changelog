@@ -20,6 +20,10 @@ abstract class AbstractChangelog {
 
 	abstract static function i18n() : array;
 
+	public static function get_module_version() {
+		return self::$module_version;
+	}
+
 	public static function add_menu() {
 		add_submenu_page(
 			static::$menu_parent,			// $parent_slug:string,
