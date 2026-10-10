@@ -54,7 +54,9 @@ abstract class AbstractChangelog {
 			$version = str_replace( '_', '.', $version );
 			$changelogs[$version] = wp_json_file_decode( $changelog_file, ['associative' => true] );
 		}
-		$changelogs = array_reverse( $changelogs );
+		uksort( $changelogs, function( $a, $b ) {
+			return version_compare( $b, $a );
+		} );
 		wp_localize_script( 'mj-changelog', 'changelogItems', $changelogs );
 		
 		$active_version = array_key_first( $changelogs );
